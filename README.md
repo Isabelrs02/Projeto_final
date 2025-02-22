@@ -99,7 +99,8 @@ Vídeo Demonstrativo
 
 Assista à demonstração do projeto no YouTube: 
 
-Repositório no GitHub
+Repositório no GitHub :
+https://github.com/Isabelrs02/Projeto_final.git
 
 Autor
 
