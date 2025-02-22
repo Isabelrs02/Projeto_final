@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "author": "Isabel Rosa de Santana",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-pi-pico-w", "id": "pico", "top": -3.25, "left": 3.55, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 121.2,
+      "left": -178.6,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 157.55,
+      "left": -115.2,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 73.2,
+      "left": -188.2,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 119.15,
+      "left": -124.8,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 25.2,
+      "left": -197.8,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 90.35,
+      "left": -105.6,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -141.6,
+      "left": 117,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -103.2,
+      "left": -95.8,
+      "rotate": 180,
+      "attrs": { "color": "black", "xray": "1", "key": "a" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": -99.4,
+      "left": -211.2,
+      "attrs": { "color": "black", "xray": "1", "key": "b" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "pico:GP13", "r1:2", "red", [ "h0" ] ],
+    [ "led1:A", "r1:1", "red", [ "v0" ] ],
+    [ "led1:C", "pico:GND.4", "green", [ "v0" ] ],
+    [ "led2:A", "r2:1", "blue", [ "v0" ] ],
+    [ "r2:2", "pico:GP12", "blue", [ "v0" ] ],
+    [ "led2:C", "pico:GND.4", "green", [ "v0" ] ],
+    [ "led3:A", "r3:1", "limegreen", [ "v0", "h19.2", "v28.8" ] ],
+    [ "r3:2", "pico:GP11", "limegreen", [ "v0" ] ],
+    [ "led3:C", "pico:GND.4", "green", [ "v0" ] ],
+    [ "bz1:2", "pico:GP21", "red", [ "v0" ] ],
+    [ "bz1:1", "pico:GND.6", "black", [ "v0" ] ],
+    [ "btn1:1.l", "pico:GP5", "green", [ "h-2.8", "v108.6" ] ],
+    [ "btn1:2.l", "pico:GND.2", "magenta", [ "h0" ] ],
+    [ "btn2:1.r", "pico:GND.2", "violet", [ "v0", "h29", "v96" ] ],
+    [ "btn2:2.r", "pico:GP6", "green", [ "h19.4", "v134.6" ] ]
+  ],
+  "dependencies": {}
+}

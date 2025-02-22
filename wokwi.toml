@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'build\Projeto_final.hex'
+elf = 'build\Projeto_final.uf2'
