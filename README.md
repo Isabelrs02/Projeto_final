@@ -96,8 +96,7 @@ Sensores reais para medição dos parâmetros.
 
 
 Vídeo Demonstrativo
-
-Assista à demonstração do projeto no YouTube: 
+Assista à demonstração do projeto no YouTube: https://youtu.be/pOdxXYyKwDs?si=c1XefyVSlc68eRvm
 
 Repositório no GitHub :
 https://github.com/Isabelrs02/Projeto_final.git
